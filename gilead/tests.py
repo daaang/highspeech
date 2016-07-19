@@ -1,6 +1,7 @@
 from django.test import TestCase
 
-HASH_HELP_SUBSTR = "I assumed your browser would support JavaScript"
+HASH_HELP_SUBSTR = \
+        "the URL you entered\n      will only work in JavaScript"
 
 class TestHashUrlView (TestCase):
 

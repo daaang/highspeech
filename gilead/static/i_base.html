@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uh Oh Alert!</title>
+    <style type="text/css">
+body {
+  background-color: #ccc;
+  max-width: 64ex;
+}
+
+pre {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 0.5ex;
+}
+
+pre strong {
+  font-weight: bolder;
+  color: #c00;
+}
+
+tt {
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <p>Above this text, you should see something that looks like:</p>
+
+    <pre>www.something.com/<strong>i#/</strong>etc/etc</pre>
+
+    <p>Please delete that <tt>#</tt> character, and everything should
+      work just fine!</p>
+
+    <p>In case you're wondering what's going on, the URL you entered
+      will only work in JavaScript-enabled browsers. Since your browser
+      does not allow JavaScript, you'll have to remove that <tt>#</tt>
+      character by hand.</p>
+
+    <p>I apologize for any inconvenience on your part.</p>
+    <script type="text/javascript">
+var true_location = location.hash.substr(1);
+
+if (!true_location.startsWith("/")) {
+  true_location = "/" + true_location;
+}
+
+//document.body.innerHTML = "<pre>" + true_location + "</pre>";
+    </script>
+  </body>
+</html>
